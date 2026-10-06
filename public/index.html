@@ -1,11 +1,647 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Mi CV</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yurakuna | Cocina Peruana Vegana</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 <body>
-  <h1>Alexander Huayta</h1>
-  <p>Desplegado en Render</p>
+
+  <!-- ══════════════════════════════════
+       INTRO SPLASH
+  ══════════════════════════════════ -->
+  <div id="intro">
+    <div id="intro-content">
+      <div id="intro-line-top"></div>
+      <h1 id="intro-title">YURAKUNA</h1>
+      <div id="intro-divider"></div>
+      <p id="intro-tagline">ALGO M&Aacute;S QUE SABOR</p>
+      <div id="intro-line-bottom"></div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════
+       P&Aacute;GINA PRINCIPAL (oculta al inicio)
+  ══════════════════════════════════ -->
+  <div id="main-page">
+
+<!-- NAV -->
+    <nav id="top-nav">
+      <div class="nav-inner">
+
+        <!-- Links -->
+        <div class="nav-links">
+          <a href="#esencia" data-i18n="nav_about">Nosotros</a>
+          <a href="#carta" data-i18n="nav_exp">Experiencias</a>
+          <a href="#galeria" data-i18n="nav_gallery">Galer&iacute;a</a>
+          <a href="#contacto" data-i18n="nav_location">Ubicaci&oacute;n</a>
+        </div>
+
+        <!-- Derecha: idiomas + reservar -->
+        <div class="nav-right">
+
+          <!-- Selector idioma desplegable -->
+          <div class="lang-dropdown" id="lang-dropdown">
+            <button class="lang-trigger" id="lang-trigger">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+              </svg>
+              <span id="lang-current">ES</span>
+              <svg class="lang-arrow" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="6 9 12 15 18 9"/>
+              </svg>
+            </button>
+            <div class="lang-menu" id="lang-menu">
+              <button class="lang-option active" data-lang="ES">Espa&ntilde;ol</button>
+              <button class="lang-option" data-lang="EN">English</button>
+              <button class="lang-option" data-lang="FR">Fran&ccedil;ais</button>
+              <button class="lang-option" data-lang="PT">Portugu&ecirc;s</button>
+            </div>
+          </div>
+
+          <button class="nav-cta btn-reservar" data-i18n="nav_booking">Reservar</button>
+        </div>
+
+        <button id="hamburger" aria-label="Men&uacute;">&#9776;</button>
+      </div>
+
+      <!-- Mobile menu -->
+      <div id="mobile-menu">
+        <a href="#esencia" class="mobile-link" data-i18n="nav_about">Nosotros</a>
+        <a href="#carta" class="mobile-link" data-i18n="nav_exp">Experiencias</a>
+        <a href="#galeria" class="mobile-link" data-i18n="nav_gallery">Galer&iacute;a</a>
+        <a href="#contacto" class="mobile-link" data-i18n="nav_location">Ubicaci&oacute;n</a>
+        <button class="mobile-cta btn-reservar" data-i18n="nav_booking" style="border:none; cursor:pointer; width:100%;">Reservar</button>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <section id="hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <img src="assets/images/logo.webp" alt="Yurakuna" class="hero-logo" />
+        <p class="hero-sub" data-i18n="hero_sub">Sabores que trascienden en el coraz&oacute;n de la Ciudad Blanca.</p>
+        <div class="hero-ctas">
+          <button class="btn-primary btn-open-menu" data-i18n="hero_menu_btn">Ver la carta</button>
+          <a href="#contacto" class="btn-secondary" data-i18n="hero_directions_btn">C&oacute;mo llegar</a>
+        </div>
+      </div>
+      <div class="scroll-hint">&#8964;</div>
+    </section>
+
+
+    <!-- ══════════════════════════════════
+         M&Eacute;TRICAS
+    ══════════════════════════════════ -->
+    <section id="metricas">
+      <div class="metricas-inner">
+
+        <div class="metrica-item reveal-up">
+          <span class="metrica-num">8</span>
+          <span class="metrica-unit" data-i18n="metric_1_unit">a&ntilde;os</span>
+          <span class="metrica-label" data-i18n="metric_1_label">de historia</span>
+        </div>
+
+        <div class="metrica-sep"></div>
+
+        <div class="metrica-item reveal-up delay-1">
+          <span class="metrica-num">100%</span>
+          <span class="metrica-label" data-i18n="metric_2_label">Vegano</span>
+        </div>
+
+        <div class="metrica-sep"></div>
+
+        <div class="metrica-item reveal-up delay-2">
+          <span class="metrica-num">4.9</span>
+          <span class="metrica-unit">★</span>
+          <span class="metrica-label" data-i18n="metric_3_label">valoraci&oacute;n en Google</span>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════
+         NOSOTROS
+    ══════════════════════════════════ -->
+    <section id="esencia">
+      <div class="nosotros-inner">
+
+        <!-- Imagen con marco decorativo -->
+        <div class="nosotros-img-wrap reveal-left">
+          <div class="nosotros-frame">
+            <img src="assets/images/nosotros.png" alt="Yurakuna Restaurante" />
+          </div>
+        </div>
+
+        <!-- Texto -->
+        <div class="nosotros-text reveal-right">
+          <span class="section-eyebrow" data-i18n="about_eyebrow">Nuestra Historia</span>
+          <h2 class="section-title" data-i18n="about_title">Cocina peruana vegana<br>con alma arequipe&ntilde;a</h2>
+          <div class="gold-line"></div>
+          <p class="section-body" data-i18n="about_body_1">
+            Nacimos en 2018 con una convicci&oacute;n: demostrar que la cocina vegana puede ser tan vibrante, compleja y satisfactoria como cualquier propuesta de alta cocina. Cada plato honra los insumos locales, la t&eacute;cnica y la herencia culinaria del Per&uacute;.
+          </p>
+          <p class="section-body" data-i18n="about_body_2">
+            Ubicados en el coraz&oacute;n del Centro Hist&oacute;rico de Arequipa, nuestra mesa es un espacio donde el sabor, el respeto por la tierra y la creatividad se encuentran.
+          </p>
+          <a href="#contacto" class="btn-primary" data-i18n="about_cta" style="display:inline-block; margin-top: 32px;">
+            Encu&eacute;ntranos
+          </a>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ══════════════════════════════════
+         EXPERIENCIAS
+    ══════════════════════════════════ -->
+    <section id="carta" class="section-padding">
+      <div class="container-small">
+        <div class="section-header text-center reveal-up">
+          <span class="section-eyebrow" data-i18n="exp_eyebrow">Experiencias Culinarias</span>
+          <h2 class="section-title" data-i18n="exp_title">Momentos Singulares</h2>
+          <div class="gold-line centered"></div>
+          <p class="section-subtitle" data-i18n="exp_subtitle">
+            Propuestas dise&ntilde;adas para sumergirse en los sabores de nuestra cocina y el misticismo de Arequipa.
+          </p>
+        </div>
+      </div>
+
+      <div class="experiencias-rows">
+        <!-- Experiencia 1 -->
+        <div class="experiencia-row">
+          <div class="exp-img-wrap reveal-left">
+            <div class="exp-frame">
+              <img src="galeria/WhatsApp Image 2026-06-27 at 3.25.17 PM (2).jpeg" alt="Men&uacute; de Degustaci&oacute;n" />
+            </div>
+          </div>
+          <div class="exp-text reveal-right">
+            <span class="exp-number">01</span>
+            <span class="exp-eyebrow" data-i18n="exp_1_eyebrow">Arequipa en 6 Tiempos</span>
+            <h3 class="exp-title" data-i18n="exp_1_title">Men&uacute; de Degustaci&oacute;n</h3>
+            <p class="section-body" data-i18n="exp_1_body">
+              Un recorrido sensorial por la campi&ntilde;a arequipe&ntilde;a y sus insumos ancestrales. Seis platos creados por nuestro chef para explorar la riqueza bot&aacute;nica del sur peruano, armonizados con una selecci&oacute;n exclusiva de bebidas org&aacute;nicas.
+            </p>
+            <button class="btn-secondary btn-reservar" data-exp="degustacion" data-i18n="exp_1_cta">
+              Reservar Experiencia
+            </button>
+          </div>
+        </div>
+
+        <!-- Experiencia 2 -->
+        <div class="experiencia-row reverse">
+          <div class="exp-img-wrap reveal-right">
+            <div class="exp-frame">
+              <img src="galeria/WhatsApp Image 2026-06-27 at 3.25.21 PM (1).jpeg" alt="Maridaje y Cocteler&iacute;a" />
+            </div>
+          </div>
+          <div class="exp-text reveal-left">
+            <span class="exp-number">02</span>
+            <span class="exp-eyebrow" data-i18n="exp_2_eyebrow">Alquimia y Naturaleza</span>
+            <h3 class="exp-title" data-i18n="exp_2_title">Maridaje & Cocteler&iacute;a Bot&aacute;nica</h3>
+            <p class="section-body" data-i18n="exp_2_body">
+              Nuestra barra rinde homenaje a las hierbas nativas y destilados locales. Experimente un maridaje exclusivo guiado por nuestro sommelier, disfrutando de c&oacute;cteles de autor, fermentos de la casa y vinos biodin&aacute;micos.
+            </p>
+            <button class="btn-secondary btn-reservar" data-exp="maridaje" data-i18n="exp_2_cta">
+              Consultar Reserva
+            </button>
+          </div>
+        </div>
+
+        <!-- Experiencia 3 -->
+        <div class="experiencia-row">
+          <div class="exp-img-wrap reveal-left">
+            <div class="exp-frame">
+              <img src="galeria/WhatsApp Image 2026-06-27 at 3.25.22 PM (1).jpeg" alt="Cena en la B&oacute;veda" />
+            </div>
+          </div>
+          <div class="exp-text reveal-right">
+            <span class="exp-number">03</span>
+            <span class="exp-eyebrow" data-i18n="exp_3_eyebrow">M&iacute;stica e Historia</span>
+            <h3 class="exp-title" data-i18n="exp_3_title">Cena Privada en B&oacute;veda de Sillar</h3>
+            <p class="section-body" data-i18n="exp_3_body">
+              Viva una velada &iacute;ntima bajo las hist&oacute;ricas b&oacute;vedas coloniales de sillar del siglo XVIII. Un espacio de privacidad absoluta con servicio exclusivo de camarero, dise&ntilde;o floral a medida y un men&uacute; degustaci&oacute;n personalizado.
+            </p>
+            <button class="btn-secondary btn-reservar" data-exp="boveda" data-i18n="exp_3_cta">
+              Solicitar Espacio
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ══════════════════════════════════
+         GALER&Iacute;A
+    ══════════════════════════════════ -->
+    <section id="galeria" class="section-padding">
+      <div class="container">
+        <div class="section-header text-center reveal-up">
+          <span class="section-eyebrow" data-i18n="gallery_eyebrow">Visuales del Alma</span>
+          <h2 class="section-title" data-i18n="gallery_title">Galer&iacute;a de Yurakuna</h2>
+          <div class="gold-line centered"></div>
+          <p class="section-subtitle" data-i18n="gallery_subtitle">
+            Cada plato es una obra de arte; cada rinc&oacute;n cuenta una historia. Explore nuestra propuesta visual.
+          </p>
+        </div>
+
+        <!-- Filtros de Categor&iacute;as -->
+        <div class="gallery-filters reveal-up">
+          <button class="filter-btn active" data-filter="all" data-i18n="gallery_filter_all">Todos</button>
+          <button class="filter-btn" data-filter="entradas" data-i18n="gallery_filter_entradas">Entradas</button>
+          <button class="filter-btn" data-filter="fondos" data-i18n="gallery_filter_fondos">Fondos</button>
+          <button class="filter-btn" data-filter="postres" data-i18n="gallery_filter_postres">Postres</button>
+          <button class="filter-btn" data-filter="ambiente" data-i18n="gallery_filter_ambiente">El Espacio</button>
+        </div>
+
+        <!-- Grid de la Galer&iacute;a -->
+        <div class="gallery-grid-wrapper reveal-up">
+          <div class="gallery-grid" id="gallery-grid">
+            <!-- Se inyecta din&aacute;micamente con JS -->
+          </div>
+        </div>
+
+        <!-- Bot&oacute;n Ver M&aacute;s -->
+        <div class="gallery-more-wrap text-center reveal-up">
+          <button id="gallery-load-more" class="btn-secondary" data-i18n="gallery_load_more">
+            Ver m&aacute;s im&aacute;genes
+          </button>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ══════════════════════════════════
+         CONTACTO Y UBICACI&Oacute;N
+    ══════════════════════════════════ -->
+    <section id="contacto" class="section-padding">
+      <div class="contacto-inner">
+        <!-- Info -->
+        <div class="contacto-text reveal-left">
+          <span class="section-eyebrow" data-i18n="location_eyebrow">Ubicaci&oacute;n y Reservas</span>
+          <h2 class="section-title" data-i18n="location_title">Encu&eacute;ntranos en la Ciudad Blanca</h2>
+          <div class="gold-line"></div>
+          
+          <div class="contacto-items">
+            <div class="contacto-item">
+              <span class="contacto-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                  <circle cx="12" cy="10" r="3"/>
+                </svg>
+              </span>
+              <div class="contacto-desc">
+                <h4 data-i18n="location_item_1_title">Direcci&oacute;n</h4>
+                <p data-i18n="location_item_1_body">Calle Moral 301, Centro Histórico, Arequipa, Perú</p>
+              </div>
+            </div>
+
+            <div class="contacto-item">
+              <span class="contacto-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72(12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                </svg>
+              </span>
+              <div class="contacto-desc">
+                <h4 data-i18n="location_item_2_title">Reservas y Consultas</h4>
+                <p>+51 999 999 999 | reservas@yurakuna.com</p>
+              </div>
+            </div>
+
+            <div class="contacto-item">
+              <span class="contacto-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                  <line x1="16" y1="2" x2="16" y2="6"/>
+                  <line x1="8" y1="2" x2="8" y2="6"/>
+                  <line x1="3" y1="10" x2="21" y2="10"/>
+                </svg>
+              </span>
+              <div class="contacto-desc">
+                <h4 data-i18n="location_item_3_title">Horario de Atenci&oacute;n</h4>
+                <p data-i18n="location_item_3_body">Lunes a S&aacute;bado: 12:00 PM &ndash; 10:00 PM<br>Domingos: Cerrado</p>
+              </div>
+            </div>
+          </div>
+
+          <a href="https://maps.google.com/?q=YURAKUNA+RESTAURANTE+VEGANO/@-16.3974624,-71.5350468" ...></a>
+            C&oacute;mo Llegar
+          </a>
+        </div>
+
+        <!-- Mapa -->
+        <div class="contacto-map reveal-right">
+          <div class="map-container">
+            <iframe 
+              src="https://maps.google.com/maps?q=YURAKUNA%20RESTAURANTE%20VEGANO,%20C.%20Jerusal%C3%A9n%20201-D,%20Arequipa&t=&z=17&ie=UTF8&iwloc=&output=embed"
+              width="100%" 
+              height="100%" 
+              style="border:0;" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ══════════════════════════════════
+         FOOTER
+    ══════════════════════════════════ -->
+    <footer id="main-footer">
+      <div class="footer-top">
+        <div class="footer-col brand-col">
+          <img src="assets/images/logo.webp" alt="Yurakuna" class="footer-logo" />
+          <p class="footer-tagline" data-i18n="footer_tagline">Cocina peruana vegana con alma arequipe&ntilde;a. Sabores que trascienden en el coraz&oacute;n de la Ciudad Blanca.</p>
+          <div class="footer-socials">
+            <a href="https://www.facebook.com/people/Yurakuna/61569529107816/" target="_blank" aria-label="Facebook">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+              </svg>
+            </a>
+            <a href="https://www.instagram.com/yurakunaaqp/" target="_blank" aria-label="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                <circle cx="12" cy="12" r="4"/>
+                <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+              </svg>
+            </a>
+            <a href="https://www.tiktok.com/@yurakunaaqp" target="_blank" aria-label="TikTok">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.17 8.17 0 0 0 4.78 1.52V6.75a4.85 4.85 0 0 1-1.01-.06z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h3 data-i18n="footer_nav_title">Navegaci&oacute;n</h3>
+          <ul class="footer-links">
+            <li><a href="#esencia" data-i18n="nav_about">Nosotros</a></li>
+            <li><a href="#carta" data-i18n="nav_exp">Experiencias</a></li>
+            <li><a href="#galeria" data-i18n="nav_gallery">Galer&iacute;a</a></li>
+            <li><a href="#contacto" data-i18n="nav_location">Ubicaci&oacute;n</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3>Contacto</h3>
+          <ul class="footer-info-list">
+            <li>Calle Santa Catalina 123, Centro Hist&oacute;rico, Arequipa, Per&uacute;</li>
+            <li>+51 999 999 999</li>
+            <li>reservas@yurakuna.com</li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3>Horario</h3>
+          <ul class="footer-info-list">
+            <li data-i18n="location_item_3_body">Lunes a S&aacute;bado: 12:00 PM &ndash; 10:00 PM<br>Domingos: Cerrado</li>
+            <li class="footer-highlight" data-i18n="footer_hours_highlight">Se sugiere reserva previa</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p data-i18n="footer_copyright">&copy; 2026 Yurakuna. Todos los derechos reservados. Cocina Peruana Vegana.</p>
+        <p class="footer-credit" data-i18n="footer_credit">Desarrollado con alma para un templo gastron&oacute;mico.</p>
+      </div>
+    </footer>
+
+
+    <!-- BOT&Oacute;N WHATSAPP FLOTANTE -->
+    <a href="https://wa.me/51999999999" target="_blank" id="whatsapp-btn" aria-label="WhatsApp">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+        <path d="M12 0C5.373 0 0 5.373 0 12c0 2.136.558 4.14 1.535 5.878L.057 23.5a.5.5 0 0 0 .61.61l5.794-1.516A11.95 11.95 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.658-.523-5.168-1.432l-.37-.22-3.833 1.004 1.028-3.758-.242-.388A9.96 9.96 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/>
+      </svg>
+    </a>
+
+    <!-- REDES SOCIALES FLOTANTES -->
+    <div id="social-float">
+      <a href="https://www.facebook.com/people/Yurakuna/61569529107816/" 
+         target="_blank" class="social-btn" aria-label="Facebook">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+        </svg>
+      </a>
+      <a href="https://www.instagram.com/yurakunaaqp/" 
+         target="_blank" class="social-btn" aria-label="Instagram">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+          <circle cx="12" cy="12" r="4"/>
+          <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+        </svg>
+      </a>
+      <a href="https://www.tiktok.com/@yurakunaaqp" 
+         target="_blank" class="social-btn" aria-label="TikTok">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.17 8.17 0 0 0 4.78 1.52V6.75a4.85 4.85 0 0 1-1.01-.06z"/>
+        </svg>
+      </a>
+    </div>
+
+  </div><!-- /main-page -->
+
+
+  <!-- ══════════════════════════════════
+       OVERLAY CARTA INTERACTIVA
+  ══════════════════════════════════ -->
+  <div id="carta-overlay">
+    <div id="carta-black-fade"></div>
+    
+    <div id="carta-loader">
+      <div class="spinner-gold"></div>
+      <p>Rendiendo honores a los insumos...</p>
+    </div>
+
+    <div id="book-container">
+      <div class="book-header">
+        <span class="book-tag">CARTA DE YURAKUNA</span>
+        <button id="close-carta-btn" class="gold-circle-btn" aria-label="Cerrar carta">
+          <span>&times;</span>
+        </button>
+      </div>
+
+      <div id="menu-book" class="menu-book">
+        <!-- Las p&aacute;ginas se inyectan din&aacute;micamente con JS (PDF.js) -->
+      </div>
+
+      <div class="book-footer">
+        <button id="book-prev-btn" class="gold-circle-btn" aria-label="P&aacute;gina anterior">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <polyline points="15 18 9 12 15 6"/>
+          </svg>
+        </button>
+        <span id="book-page-indicator">Cargando...</span>
+        <button id="book-next-btn" class="gold-circle-btn" aria-label="P&aacute;gina siguiente">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <polyline points="9 18 15 12 9 6"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ══════════════════════════════════
+       LIGHTBOX DE LA GALER&Iacute;A
+  ══════════════════════════════════ -->
+  <div id="lightbox-overlay">
+    <button id="lightbox-close" class="gold-circle-btn" aria-label="Cerrar galer&iacute;a">
+      <span>&times;</span>
+    </button>
+    
+    <button id="lightbox-prev" class="gold-circle-btn lightbox-nav" aria-label="Imagen anterior">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+        <polyline points="15 18 9 12 15 6"/>
+      </svg>
+    </button>
+
+    <div class="lightbox-content">
+      <img id="lightbox-img" src="" alt="" />
+      <div class="lightbox-caption">
+        <h4 id="lightbox-title"></h4>
+        <p id="lightbox-desc"></p>
+      </div>
+    </div>
+
+    <button id="lightbox-next" class="gold-circle-btn lightbox-nav" aria-label="Imagen siguiente">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+        <polyline points="9 18 15 12 9 6"/>
+      </svg>
+    </button>
+  </div>
+
+
+  <!-- ══════════════════════════════════
+       MODAL DE RESERVAS (UI)
+  ══════════════════════════════════ -->
+  <div id="reserva-modal">
+    <div class="reserva-backdrop"></div>
+    <div class="reserva-container">
+      <button id="close-reserva-btn" class="gold-circle-btn" aria-label="Cerrar reservas">
+        <span>&times;</span>
+      </button>
+
+      <!-- Formulario de Reserva -->
+      <div class="reserva-content" id="reserva-form-step">
+        <h3 class="reserva-title" data-i18n="reserva_title">Reservar una Mesa</h3>
+        <p class="reserva-subtitle" data-i18n="reserva_subtitle">Complete los detalles para solicitar su experiencia gastron&oacute;mica en Yurakuna.</p>
+        
+        <form id="booking-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="reserva-nombre" data-i18n="reserva_lbl_name">Nombre Completo</label>
+              <input type="text" id="reserva-nombre" required placeholder="Ej. Alejandro Toledo" />
+            </div>
+            <div class="form-group">
+              <label for="reserva-email" data-i18n="reserva_lbl_email">Correo Electr&oacute;nico</label>
+              <input type="email" id="reserva-email" required placeholder="Ej. alejandro@correo.com" />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="reserva-telefono" data-i18n="reserva_lbl_phone">Tel&eacute;fono / WhatsApp</label>
+              <input type="tel" id="reserva-telefono" required placeholder="Ej. +51 999 999 999" />
+            </div>
+            <div class="form-group">
+              <label for="reserva-invitados" data-i18n="reserva_lbl_guests">N&uacute;mero de Comensales</label>
+              <select id="reserva-invitados" required>
+                <option value="1" data-i18n="reserva_opt_guest_1">1 Persona</option>
+                <option value="2" data-i18n="reserva_opt_guest_2" selected>2 Personas</option>
+                <option value="3" data-i18n="reserva_opt_guest_3">3 Personas</option>
+                <option value="4" data-i18n="reserva_opt_guest_4">4 Personas</option>
+                <option value="5" data-i18n="reserva_opt_guest_5">5 Personas</option>
+                <option value="6" data-i18n="reserva_opt_guest_6">6 Personas</option>
+                <option value="7" data-i18n="reserva_opt_guest_7">7 Personas</option>
+                <option value="8" data-i18n="reserva_opt_guest_8">8+ Personas (Evento Especial)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="reserva-fecha" data-i18n="reserva_lbl_date">Fecha</label>
+              <input type="date" id="reserva-fecha" required />
+            </div>
+            <div class="form-group">
+              <label for="reserva-hora" data-i18n="reserva_lbl_time">Hora</label>
+              <select id="reserva-hora" required>
+                <option value="" disabled selected data-i18n="reserva_opt_time_placeholder">Seleccione un horario</option>
+                <option value="12:00">12:00 PM</option>
+                <option value="13:00">01:00 PM</option>
+                <option value="14:00">02:00 PM</option>
+                <option value="15:00">03:00 PM</option>
+                <option value="18:30">06:30 PM</option>
+                <option value="19:30">07:30 PM</option>
+                <option value="20:30">08:30 PM</option>
+                <option value="21:30">09:30 PM</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="reserva-experiencia" data-i18n="reserva_lbl_exp">Experiencia Elegida</label>
+            <select id="reserva-experiencia" required>
+              <option value="general" selected data-i18n="reserva_opt_general">Mesa General (A la Carta)</option>
+              <option value="degustacion" data-i18n="reserva_opt_degustacion">Men&uacute; de Degustaci&oacute;n (6 Tiempos)</option>
+              <option value="maridaje" data-i18n="reserva_opt_maridaje">Maridaje & Cocteler&iacute;a Bot&aacute;nica</option>
+              <option value="boveda" data-i18n="reserva_opt_boveda">Cena Privada en B&oacute;veda de Sillar</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="reserva-notas" data-i18n="reserva_lbl_notes">Requerimientos Especiales / Alergias</label>
+            <textarea id="reserva-notas" rows="3" placeholder="Indique si tiene alguna alergia alimentaria o requerimiento particular..."></textarea>
+          </div>
+
+          <button type="submit" class="btn-primary" data-i18n="reserva_submit_btn" style="width: 100%; border: none; cursor: pointer; margin-top: 10px;">
+            Solicitar Reserva
+          </button>
+        </form>
+      </div>
+
+      <!-- Paso de &Eacute;xito -->
+      <div class="reserva-content success-step" id="reserva-success-step" style="display: none;">
+        <div class="success-icon-wrap">
+          <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="var(--gold-light)" stroke-width="1.5">
+            <circle cx="12" cy="12" r="10"/>
+            <polyline points="16 9 11 14 8 11"/>
+          </svg>
+        </div>
+        <h3 class="reserva-title" data-i18n="reserva_success_title">Solicitud Recibida</h3>
+        <p class="reserva-subtitle" data-i18n="reserva_success_subtitle">Hemos recibido su solicitud de reserva. Nuestro equipo verificar&aacute; disponibilidad y se pondr&aacute; en contacto con usted en breve a trav&eacute;s de correo o WhatsApp.</p>
+        
+        <div class="reserva-summary-box">
+          <p><strong data-i18n="reserva_lbl_guests">N&uacute;mero de Comensales</strong>: <span id="summary-invitados"></span></p>
+          <p><strong>Fecha y Hora</strong>: <span id="summary-fecha-hora"></span></p>
+          <p><strong data-i18n="reserva_lbl_exp">Experiencia Elegida</strong>: <span id="summary-experiencia"></span></p>
+        </div>
+
+        <button id="success-close-btn" class="btn-primary" data-i18n="reserva_success_btn" style="width: 100%; border: none; cursor: pointer;">
+          Entendido
+        </button>
+      </div>
+    </div>
+  </div>
+
+
+<!-- PDF.js para renderizar la carta directo del PDF -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.min.js"></script>
+  <script>
+    pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.worker.min.js';
+  </script>
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
